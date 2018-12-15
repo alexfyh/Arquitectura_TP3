@@ -1,0 +1,14 @@
+[Inputs]
+=Opcode[4:0]=
+[Outputs]
+WrPC
+SelB
+WrAcc
+Op
+WrRam
+RdRam
+=SelA[1:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel instruction_decoder
+

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/xst"
+elaborate
+-ifn univ_bin_counter.prj
+-ifmt mixed

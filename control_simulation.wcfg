@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/control_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="control" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/control/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/enable_counter" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable_counter</obj_property>
+      <obj_property name="ObjectShortName">enable_counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/WrPC" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WrPC</obj_property>
+      <obj_property name="ObjectShortName">WrPC</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/SelA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SelA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SelA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/SelB" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SelB</obj_property>
+      <obj_property name="ObjectShortName">SelB</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/WrAcc" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WrAcc</obj_property>
+      <obj_property name="ObjectShortName">WrAcc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/Op" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Op</obj_property>
+      <obj_property name="ObjectShortName">Op</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/WrRam" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WrRam</obj_property>
+      <obj_property name="ObjectShortName">WrRam</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/RdRam" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RdRam</obj_property>
+      <obj_property name="ObjectShortName">RdRam</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/Operand" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Operand[10:0]</obj_property>
+      <obj_property name="ObjectShortName">Operand[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/direccion" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">direccion[10:0]</obj_property>
+      <obj_property name="ObjectShortName">direccion[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/control/instruccion" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">instruccion[15:0]</obj_property>
+      <obj_property name="ObjectShortName">instruccion[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

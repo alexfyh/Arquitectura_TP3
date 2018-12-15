@@ -1,0 +1,2 @@
+vhdtdtfi -lib work C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/instruction_decoder.v -lang verilog -prj tp3 -o instruction_decoder.spl -module instruction_decoder -template D:/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e instruction_decoder.spl C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/instruction_decoder.sym 

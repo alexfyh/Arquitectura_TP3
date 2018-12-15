@@ -1,0 +1,4 @@
+verilog work "univ_bin_counter.v"
+verilog work "reg_file.v"
+verilog work "pc_instruccion.v"
+verilog work "D:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

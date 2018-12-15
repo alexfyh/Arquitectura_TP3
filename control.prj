@@ -1,0 +1,4 @@
+verilog work "univ_bin_counter.v"
+verilog work "reg_file.v"
+verilog work "instruction_decoder.v"
+verilog work "control.v"

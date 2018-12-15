@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/pc_instruccion_isim_beh.exe" -prj "C:/Users/alexa/Desktop/Arquitectura/workspace.ise/tp3/pc_instruccion_beh.prj" "work.pc_instruccion" "work.glbl" 
