@@ -1,0 +1,341 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date             : Sat Oct 12 18:59:59 2019
+| Host             : acer running 64-bit Linux Mint 19.1 Tessa
+| Command          : report_power -file control_power_routed.rpt -pb control_power_summary_routed.pb -rpx control_power_routed.rpx
+| Design           : control
+| Device           : xc7a35tcpg236-1
+| Design State     : routed
+| Grade            : commercial
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 9.222        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 9.097        |
+| Device Static (W)        | 0.126        |
+| Effective TJA (C/W)      | 5.0          |
+| Max Ambient (C)          | 38.9         |
+| Junction Temperature (C) | 71.1         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Slice Logic              |     0.881 |      985 |       --- |             --- |
+|   LUT as Logic           |     0.809 |      166 |     20800 |            0.80 |
+|   Register               |     0.045 |       38 |     41600 |            0.09 |
+|   CARRY4                 |     0.021 |        3 |      8150 |            0.04 |
+|   BUFG                   |     0.006 |        1 |        32 |            3.13 |
+|   Others                 |     0.000 |        2 |       --- |             --- |
+|   F7/F8 Muxes            |     0.000 |       68 |     32600 |            0.21 |
+|   LUT as Distributed RAM |     0.000 |      704 |      9600 |            7.33 |
+| Signals                  |     8.211 |      653 |       --- |             --- |
+| I/O                      |     0.004 |       22 |       106 |           20.75 |
+| Static Power             |     0.126 |          |           |                 |
+| Total                    |     9.222 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++-----------+-------------+-----------+-------------+------------+
+| Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
++-----------+-------------+-----------+-------------+------------+
+| Vccint    |       1.000 |     9.153 |       9.097 |      0.056 |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
+| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
+| Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
+| Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
+| Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
+| Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |
+| MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |
+| MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |
+| Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |
++-----------+-------------+-----------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 5.0                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 4.6                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++-----------------------------------+-----------+
+| Name                              | Power (W) |
++-----------------------------------+-----------+
+| control                           |     9.097 |
+|   program_counter                 |     8.377 |
+|   program_memory                  |     0.669 |
+|     array_reg_reg_0_63_0_2        |     0.000 |
+|     array_reg_reg_0_63_12_14      |     0.000 |
+|     array_reg_reg_0_63_15_15      |     0.000 |
+|     array_reg_reg_0_63_3_5        |     0.000 |
+|     array_reg_reg_0_63_6_8        |     0.000 |
+|     array_reg_reg_0_63_9_11       |     0.000 |
+|     array_reg_reg_1024_1087_0_2   |     0.000 |
+|     array_reg_reg_1024_1087_12_14 |     0.000 |
+|     array_reg_reg_1024_1087_15_15 |     0.000 |
+|     array_reg_reg_1024_1087_3_5   |     0.000 |
+|     array_reg_reg_1024_1087_6_8   |     0.000 |
+|     array_reg_reg_1024_1087_9_11  |     0.000 |
+|     array_reg_reg_1088_1151_0_2   |     0.000 |
+|     array_reg_reg_1088_1151_12_14 |     0.000 |
+|     array_reg_reg_1088_1151_15_15 |     0.000 |
+|     array_reg_reg_1088_1151_3_5   |     0.000 |
+|     array_reg_reg_1088_1151_6_8   |     0.000 |
+|     array_reg_reg_1088_1151_9_11  |     0.000 |
+|     array_reg_reg_1152_1215_0_2   |     0.000 |
+|     array_reg_reg_1152_1215_12_14 |     0.000 |
+|     array_reg_reg_1152_1215_15_15 |     0.000 |
+|     array_reg_reg_1152_1215_3_5   |     0.000 |
+|     array_reg_reg_1152_1215_6_8   |     0.000 |
+|     array_reg_reg_1152_1215_9_11  |     0.000 |
+|     array_reg_reg_1216_1279_0_2   |     0.000 |
+|     array_reg_reg_1216_1279_12_14 |     0.000 |
+|     array_reg_reg_1216_1279_15_15 |     0.000 |
+|     array_reg_reg_1216_1279_3_5   |     0.000 |
+|     array_reg_reg_1216_1279_6_8   |     0.000 |
+|     array_reg_reg_1216_1279_9_11  |     0.000 |
+|     array_reg_reg_1280_1343_0_2   |     0.000 |
+|     array_reg_reg_1280_1343_12_14 |     0.000 |
+|     array_reg_reg_1280_1343_15_15 |     0.000 |
+|     array_reg_reg_1280_1343_3_5   |     0.000 |
+|     array_reg_reg_1280_1343_6_8   |     0.000 |
+|     array_reg_reg_1280_1343_9_11  |     0.000 |
+|     array_reg_reg_128_191_0_2     |     0.000 |
+|     array_reg_reg_128_191_12_14   |     0.000 |
+|     array_reg_reg_128_191_15_15   |     0.000 |
+|     array_reg_reg_128_191_3_5     |     0.000 |
+|     array_reg_reg_128_191_6_8     |     0.000 |
+|     array_reg_reg_128_191_9_11    |     0.000 |
+|     array_reg_reg_1344_1407_0_2   |     0.000 |
+|     array_reg_reg_1344_1407_12_14 |     0.000 |
+|     array_reg_reg_1344_1407_15_15 |     0.000 |
+|     array_reg_reg_1344_1407_3_5   |     0.000 |
+|     array_reg_reg_1344_1407_6_8   |     0.000 |
+|     array_reg_reg_1344_1407_9_11  |     0.000 |
+|     array_reg_reg_1408_1471_0_2   |     0.000 |
+|     array_reg_reg_1408_1471_12_14 |     0.000 |
+|     array_reg_reg_1408_1471_15_15 |     0.000 |
+|     array_reg_reg_1408_1471_3_5   |     0.000 |
+|     array_reg_reg_1408_1471_6_8   |     0.000 |
+|     array_reg_reg_1408_1471_9_11  |     0.000 |
+|     array_reg_reg_1472_1535_0_2   |     0.000 |
+|     array_reg_reg_1472_1535_12_14 |     0.000 |
+|     array_reg_reg_1472_1535_15_15 |     0.000 |
+|     array_reg_reg_1472_1535_3_5   |     0.000 |
+|     array_reg_reg_1472_1535_6_8   |     0.000 |
+|     array_reg_reg_1472_1535_9_11  |     0.000 |
+|     array_reg_reg_1536_1599_0_2   |     0.000 |
+|     array_reg_reg_1536_1599_12_14 |     0.000 |
+|     array_reg_reg_1536_1599_15_15 |     0.000 |
+|     array_reg_reg_1536_1599_3_5   |     0.000 |
+|     array_reg_reg_1536_1599_6_8   |     0.000 |
+|     array_reg_reg_1536_1599_9_11  |     0.000 |
+|     array_reg_reg_1600_1663_0_2   |     0.000 |
+|     array_reg_reg_1600_1663_12_14 |     0.000 |
+|     array_reg_reg_1600_1663_15_15 |     0.000 |
+|     array_reg_reg_1600_1663_3_5   |     0.000 |
+|     array_reg_reg_1600_1663_6_8   |     0.000 |
+|     array_reg_reg_1600_1663_9_11  |     0.000 |
+|     array_reg_reg_1664_1727_0_2   |     0.000 |
+|     array_reg_reg_1664_1727_12_14 |     0.000 |
+|     array_reg_reg_1664_1727_15_15 |     0.000 |
+|     array_reg_reg_1664_1727_3_5   |     0.000 |
+|     array_reg_reg_1664_1727_6_8   |     0.000 |
+|     array_reg_reg_1664_1727_9_11  |     0.000 |
+|     array_reg_reg_1728_1791_0_2   |     0.000 |
+|     array_reg_reg_1728_1791_12_14 |     0.000 |
+|     array_reg_reg_1728_1791_15_15 |     0.000 |
+|     array_reg_reg_1728_1791_3_5   |     0.000 |
+|     array_reg_reg_1728_1791_6_8   |     0.000 |
+|     array_reg_reg_1728_1791_9_11  |     0.000 |
+|     array_reg_reg_1792_1855_0_2   |     0.000 |
+|     array_reg_reg_1792_1855_12_14 |     0.000 |
+|     array_reg_reg_1792_1855_15_15 |     0.000 |
+|     array_reg_reg_1792_1855_3_5   |     0.000 |
+|     array_reg_reg_1792_1855_6_8   |     0.000 |
+|     array_reg_reg_1792_1855_9_11  |     0.000 |
+|     array_reg_reg_1856_1919_0_2   |     0.000 |
+|     array_reg_reg_1856_1919_12_14 |     0.000 |
+|     array_reg_reg_1856_1919_15_15 |     0.000 |
+|     array_reg_reg_1856_1919_3_5   |     0.000 |
+|     array_reg_reg_1856_1919_6_8   |     0.000 |
+|     array_reg_reg_1856_1919_9_11  |     0.000 |
+|     array_reg_reg_1920_1983_0_2   |     0.000 |
+|     array_reg_reg_1920_1983_12_14 |     0.000 |
+|     array_reg_reg_1920_1983_15_15 |     0.000 |
+|     array_reg_reg_1920_1983_3_5   |     0.000 |
+|     array_reg_reg_1920_1983_6_8   |     0.000 |
+|     array_reg_reg_1920_1983_9_11  |     0.000 |
+|     array_reg_reg_192_255_0_2     |     0.000 |
+|     array_reg_reg_192_255_12_14   |     0.000 |
+|     array_reg_reg_192_255_15_15   |     0.000 |
+|     array_reg_reg_192_255_3_5     |     0.000 |
+|     array_reg_reg_192_255_6_8     |     0.000 |
+|     array_reg_reg_192_255_9_11    |     0.000 |
+|     array_reg_reg_1984_2047_0_2   |     0.000 |
+|     array_reg_reg_1984_2047_12_14 |     0.000 |
+|     array_reg_reg_1984_2047_15_15 |     0.000 |
+|     array_reg_reg_1984_2047_3_5   |     0.000 |
+|     array_reg_reg_1984_2047_6_8   |     0.000 |
+|     array_reg_reg_1984_2047_9_11  |     0.000 |
+|     array_reg_reg_256_319_0_2     |     0.000 |
+|     array_reg_reg_256_319_12_14   |     0.000 |
+|     array_reg_reg_256_319_15_15   |     0.000 |
+|     array_reg_reg_256_319_3_5     |     0.000 |
+|     array_reg_reg_256_319_6_8     |     0.000 |
+|     array_reg_reg_256_319_9_11    |     0.000 |
+|     array_reg_reg_320_383_0_2     |     0.000 |
+|     array_reg_reg_320_383_12_14   |     0.000 |
+|     array_reg_reg_320_383_15_15   |     0.000 |
+|     array_reg_reg_320_383_3_5     |     0.000 |
+|     array_reg_reg_320_383_6_8     |     0.000 |
+|     array_reg_reg_320_383_9_11    |     0.000 |
+|     array_reg_reg_384_447_0_2     |     0.000 |
+|     array_reg_reg_384_447_12_14   |     0.000 |
+|     array_reg_reg_384_447_15_15   |     0.000 |
+|     array_reg_reg_384_447_3_5     |     0.000 |
+|     array_reg_reg_384_447_6_8     |     0.000 |
+|     array_reg_reg_384_447_9_11    |     0.000 |
+|     array_reg_reg_448_511_0_2     |     0.000 |
+|     array_reg_reg_448_511_12_14   |     0.000 |
+|     array_reg_reg_448_511_15_15   |     0.000 |
+|     array_reg_reg_448_511_3_5     |     0.000 |
+|     array_reg_reg_448_511_6_8     |     0.000 |
+|     array_reg_reg_448_511_9_11    |     0.000 |
+|     array_reg_reg_512_575_0_2     |     0.000 |
+|     array_reg_reg_512_575_12_14   |     0.000 |
+|     array_reg_reg_512_575_15_15   |     0.000 |
+|     array_reg_reg_512_575_3_5     |     0.000 |
+|     array_reg_reg_512_575_6_8     |     0.000 |
+|     array_reg_reg_512_575_9_11    |     0.000 |
+|     array_reg_reg_576_639_0_2     |     0.000 |
+|     array_reg_reg_576_639_12_14   |     0.000 |
+|     array_reg_reg_576_639_15_15   |     0.000 |
+|     array_reg_reg_576_639_3_5     |     0.000 |
+|     array_reg_reg_576_639_6_8     |     0.000 |
+|     array_reg_reg_576_639_9_11    |     0.000 |
+|     array_reg_reg_640_703_0_2     |     0.000 |
+|     array_reg_reg_640_703_12_14   |     0.000 |
+|     array_reg_reg_640_703_15_15   |     0.000 |
+|     array_reg_reg_640_703_3_5     |     0.000 |
+|     array_reg_reg_640_703_6_8     |     0.000 |
+|     array_reg_reg_640_703_9_11    |     0.000 |
+|     array_reg_reg_64_127_0_2      |     0.000 |
+|     array_reg_reg_64_127_12_14    |     0.000 |
+|     array_reg_reg_64_127_15_15    |     0.000 |
+|     array_reg_reg_64_127_3_5      |     0.000 |
+|     array_reg_reg_64_127_6_8      |     0.000 |
+|     array_reg_reg_64_127_9_11     |     0.000 |
+|     array_reg_reg_704_767_0_2     |     0.000 |
+|     array_reg_reg_704_767_12_14   |     0.000 |
+|     array_reg_reg_704_767_15_15   |     0.000 |
+|     array_reg_reg_704_767_3_5     |     0.000 |
+|     array_reg_reg_704_767_6_8     |     0.000 |
+|     array_reg_reg_704_767_9_11    |     0.000 |
+|     array_reg_reg_768_831_0_2     |     0.000 |
+|     array_reg_reg_768_831_12_14   |     0.000 |
+|     array_reg_reg_768_831_15_15   |     0.000 |
+|     array_reg_reg_768_831_3_5     |     0.000 |
+|     array_reg_reg_768_831_6_8     |     0.000 |
+|     array_reg_reg_768_831_9_11    |     0.000 |
+|     array_reg_reg_832_895_0_2     |     0.000 |
+|     array_reg_reg_832_895_12_14   |     0.000 |
+|     array_reg_reg_832_895_15_15   |     0.000 |
+|     array_reg_reg_832_895_3_5     |     0.000 |
+|     array_reg_reg_832_895_6_8     |     0.000 |
+|     array_reg_reg_832_895_9_11    |     0.000 |
+|     array_reg_reg_896_959_0_2     |     0.000 |
+|     array_reg_reg_896_959_12_14   |     0.000 |
+|     array_reg_reg_896_959_15_15   |     0.000 |
+|     array_reg_reg_896_959_3_5     |     0.000 |
+|     array_reg_reg_896_959_6_8     |     0.000 |
+|     array_reg_reg_896_959_9_11    |     0.000 |
+|     array_reg_reg_960_1023_0_2    |     0.000 |
+|     array_reg_reg_960_1023_12_14  |     0.000 |
+|     array_reg_reg_960_1023_15_15  |     0.000 |
+|     array_reg_reg_960_1023_3_5    |     0.000 |
+|     array_reg_reg_960_1023_6_8    |     0.000 |
+|     array_reg_reg_960_1023_9_11   |     0.000 |
+|   u_instruction_decoder           |     0.006 |
++-----------------------------------+-----------+
+
+

@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"pc_instruccion_func_synth.v" \
+"../../../../../../pc_instruccion.v" \
+"../../../../../../prueba_ram_datos.v" \
+"../../../../../arquitectura_tp3.srcs/sim_1/new/test_datapath.v" \
+
+# Do not sort compile order
+nosort

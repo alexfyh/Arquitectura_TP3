@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sat Oct 12 18:55:36 2019
+# Process ID: 12653
+# Current directory: /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1
+# Command line: vivado -log control.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source control.tcl
+# Log file: /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1/control.vds
+# Journal file: /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source control.tcl -notrace

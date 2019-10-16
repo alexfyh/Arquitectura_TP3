@@ -1,0 +1,17 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 5c48e299189145efbe877aac77600bc1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pc_instruccion_behav xil_defaultlib.pc_instruccion xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wr_en [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:55]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port w_addr [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:56]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port w_data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:58]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.univ_bin_counter
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.pc_instruccion
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot pc_instruccion_behav

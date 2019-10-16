@@ -1,0 +1,15 @@
+0.6
+2018.2
+Jun 14 2018
+20:07:38
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/alu.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/univ_bin_counter.v,,alu,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sim_1/new/test_datapath.v,1570917512,verilog,,,,,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/datapath.v,1570916708,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v,,datapath,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v,1570059238,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/datapath.v,,control,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v,,instruction_decoder,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/prueba_ram_datos.v,,pc_instruccion,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/prueba_ram_datos.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sim_1/new/test_datapath.v,,prueba_ram_datos,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v,,reg_file,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/top.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/alu.v,,top,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/univ_bin_counter.v,1570053227,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v,,univ_bin_counter,,,,,,,,

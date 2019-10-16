@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../top.v" \
+"../../../../../alu.v" \
+"../../../../../univ_bin_counter.v" \
+"../../../../../reg_file.v" \
+"../../../../../instruction_decoder.v" \
+"../../../../../control.v" \
+"../../../../arquitectura_tp3.srcs/sources_1/new/datapath.v" \
+"../../../../../pc_instruccion.v" \
+"../../../../../prueba_ram_datos.v" \
+"../../../../arquitectura_tp3.srcs/sim_1/new/test_datapath.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

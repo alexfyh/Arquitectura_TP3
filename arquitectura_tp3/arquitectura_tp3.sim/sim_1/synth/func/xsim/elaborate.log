@@ -1,0 +1,19 @@
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 5c48e299189145efbe877aac77600bc1 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L secureip --snapshot pc_instruccion_func_synth xil_defaultlib.pc_instruccion xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-426] cannot find port q on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:49]
+ERROR: [VRFC 10-426] cannot find port d on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:48]
+ERROR: [VRFC 10-426] cannot find port up on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:47]
+ERROR: [VRFC 10-426] cannot find port en on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:46]
+ERROR: [VRFC 10-426] cannot find port load on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:45]
+ERROR: [VRFC 10-426] cannot find port syn_clr on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:44]
+ERROR: [VRFC 10-426] cannot find port reset on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:43]
+ERROR: [VRFC 10-426] cannot find port clk on this module [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:42]
+ERROR: [VRFC 10-2063] Module <CARRY4> not found while processing module instance <r_next0> [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.sim/sim_1/synth/func/xsim/pc_instruccion_func_synth.v:7187]
+ERROR: [VRFC 10-2063] Module <LUT2> not found while processing module instance <r_next0__0_i_1> [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.sim/sim_1/synth/func/xsim/pc_instruccion_func_synth.v:7203]
+ERROR: [VRFC 10-2063] Module <LUT1> not found while processing module instance <r_next0_i_1> [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.sim/sim_1/synth/func/xsim/pc_instruccion_func_synth.v:7247]
+ERROR: [VRFC 10-2063] Module <FDCE> not found while processing module instance <r_reg_reg[0]> [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.sim/sim_1/synth/func/xsim/pc_instruccion_func_synth.v:7306]
+ERROR: [VRFC 10-2063] Module <reg_file> not found while processing module instance <ram_instrucciones> [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:52]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

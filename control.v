@@ -49,7 +49,7 @@ module control
 	 );
 	 
 	 
-	 reg_file #(.B(16),.W(11),.FILE("instrucciones.mem")) ram_instrucciones 
+	 reg_file #(.B(16),.W(11),.FILE("instrucciones.mem")) program_memory
 	(
 		.clk(clk),
 		.wr_en(0),
