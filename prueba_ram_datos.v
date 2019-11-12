@@ -27,10 +27,9 @@ module prueba_ram_datos;
 	// Inputs
 	reg clk;
 	reg wr_en;
-	reg [10:0] w_addr;
-	reg [10:0] r_addr;
+	reg rd_en;
+	reg [10:0] addr;
 	reg [15:0] w_data;
-	
 	integer direccion;
 
 	// Outputs
@@ -38,11 +37,11 @@ module prueba_ram_datos;
 	
 
 	// Instantiate the Unit Under Test (UUT)
-	reg_file #(.FILE("datos.mem"))datos (
+	reg_file #(.FILE(""))datos (
 		.clk(clk), 
-		.wr_en(wr_en), 
-		.w_addr(w_addr), 
-		.r_addr(r_addr), 
+		.wr_en(wr_en),
+		.rd_en(rd_en),  
+		.addr(addr), 
 		.w_data(w_data), 
 		.r_data(r_data)
 	);
@@ -51,21 +50,23 @@ module prueba_ram_datos;
 		// Initialize Inputs
 		clk = 0;
 		wr_en = 0;
-		w_addr = 0;
-		r_addr = 0;
+		rd_en = 1;
+		addr = 0;
 		w_data = 0;
 		direccion=0;
-
+		
+		#5
+        rd_en = 0;
 		// Wait 100 ns for global reset to finish
-		#100;
         
 		// Add stimulus here
 	end
+	
 	always
 	begin
 	#1
 	direccion=direccion +1;
-	r_addr=direccion;
+	addr=direccion;
 	end
       
 endmodule

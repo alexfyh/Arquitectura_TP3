@@ -19,39 +19,40 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module reg_file #(
-    parameter B = 16, // number of bits
-              W = 11, // number of address bits
-				  FILE=""
+    parameter   B = 16, // number of bits
+                W = 11, // number of address bits
+                FILE=""
    )
    (
-    input wire clk,
-    input wire wr_en,
-    input wire [W-1:0] w_addr, r_addr,
-    input wire [B-1:0] w_data,
-    output wire [B-1:0] r_data
+        input wire clk,
+        input wire wr_en,
+        input wire rd_en,
+        input wire [W-1:0] addr,
+        input wire [B-1:0] w_data,
+        output wire [B-1:0] r_data
    );
 
    // signal declaration
-   reg [B-1:0] array_reg [2**W-1:0];
-	integer direccion;
+    reg [B-1:0] array_reg [2**W-1:0];
+    integer direccion;
 
    // body
    // write operation
-	initial
+    initial
 	begin
 		if(FILE !="")
 			$readmemh(FILE, array_reg,0,2**W-1);
 		else
 		begin	
 			for (direccion = 0; direccion < 2**W-1; direccion = direccion + 1)
-          array_reg[direccion] = {B{1'b0}};
+                array_reg[direccion] = {B{1'b0}};
 		end
 	end
 	
-	always @(posedge clk)
-      if (wr_en)
-         array_reg[w_addr] <= w_data;
+    always @(posedge clk)
+    if (wr_en)
+        array_reg[addr] <= w_data;
    // read operation
-   assign r_data = array_reg[r_addr];
+    assign r_data = rd_en? array_reg[addr]: {B{1'bz}};
 
 endmodule

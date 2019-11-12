@@ -33,6 +33,8 @@ module pc_instruccion;
 	reg up;
 	reg [10:0] d;
 	wire [15:0]instrucciones;
+	
+	reg rd_en;
 
 	// Outputs
 	wire [10:0] salida_counter;
@@ -49,12 +51,12 @@ module pc_instruccion;
 		.q(salida_counter)
 	);
 	
-	reg_file #(.B(16),.W(11)) ram_instrucciones 
+	reg_file #(.B(16),.W(11),.FILE("/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instrucciones.mem")) ram_instrucciones 
 	(
 		.clk(clk),
-		.wr_en(0),
-		.w_addr(0),
-		.r_addr(salida_counter),
+		.wr_en(1'b0),
+		.rd_en(rd_en),
+		.addr(salida_counter),
 		.w_data(0),
 		.r_data(instrucciones)
 	);
@@ -68,12 +70,13 @@ module pc_instruccion;
 		en = 1;
 		up = 1;
 		d = 0;
+		rd_en=1;
 		#1
 		reset = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
-        
+		#10;
+        rd_en=0;
 		// Add stimulus here
 
 	end
