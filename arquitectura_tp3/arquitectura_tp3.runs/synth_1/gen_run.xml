@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1570917333">
-  <File Type="VDS-TIMING-PB" Name="control_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="control_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1573068677">
+  <File Type="PA-TCL" Name="control.tcl"/>
+  <File Type="REPORTS-TCL" Name="control_reports.tcl"/>
+  <File Type="RDS-RDS" Name="control.vds"/>
   <File Type="RDS-DCP" Name="control.dcp"/>
   <File Type="RDS-UTIL-PB" Name="control_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="control_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="control_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="control.vds"/>
-  <File Type="REPORTS-TCL" Name="control_reports.tcl"/>
-  <File Type="PA-TCL" Name="control.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../top.v">
@@ -61,6 +58,27 @@
     </File>
     <File Path="$PPRDIR/import_ise_summary.txt"/>
     <File Path="$PSRCDIR/sources_1/new/datapath.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/bip.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cpu.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/reg_file_mod.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

@@ -37,6 +37,9 @@ read_verilog -library xil_defaultlib {
   /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v
   /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v
   /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/datapath.v
+  /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/bip.v
+  /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/cpu.v
+  /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sources_1/new/reg_file_mod.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

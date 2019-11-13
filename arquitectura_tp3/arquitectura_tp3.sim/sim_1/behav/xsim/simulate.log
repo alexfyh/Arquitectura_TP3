@@ -1,2 +1,4 @@
 Vivado Simulator 2018.2
 Time resolution is 1 ps
+$finish called at time : 20 ns : File "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.srcs/sim_1/new/test_control.v" Line 72
+Stopped at time : 20 ns : File "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v" Line 38

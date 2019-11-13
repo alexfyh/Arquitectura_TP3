@@ -1,0 +1,88 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12.11.2019 23:45:12
+// Design Name: 
+// Module Name: bip
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module bip(
+        input clk,
+        input reset
+    );
+    wire [10:0] instruction_address;
+    wire [1:0]SelA;
+    wire SelB;
+    wire WrAcc;
+    wire Op;
+    wire WrRam;
+    wire RdRam;
+    wire [10:0] Operand;
+    wire [10:0] Addr;
+    wire [10:0] Instruccion;
+    
+    wire [10:0] Address_data;
+    wire [10:0] In_Data;
+    wire [10:0] Out_Data;
+    
+    control u_control(
+        .SelA(SelA),
+        .SelB(SelB),
+        .WrACC(WrAcc),
+        .Op(Op),
+        .WrRam(WrRam),
+        .RdRam(RdRam),
+        .Operand(Operand),
+        .Addr(Addr),
+        
+        .clk(clk),
+        .reset(reset),
+        .Instruccion(Instruccion)
+        
+    );
+    reg_file 
+        #(.FILE("/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instrucciones.mem"))
+        program_memory(
+        .r_data(Instruccion),
+        
+        .wr_en(1'b0),
+        .rd_en(1'b1),
+        .addr(Addr),
+        .w_data(0)
+    );
+    datapath u_datapath(
+        .Address(Address_data),
+        .In_Data(),
+        
+        .SelA(SelA),
+        .SelB(SelB),
+        .WrAcc(WrAcc),
+        .Op(Op),
+        .Operand(Operand),
+        .Out_Data(Out_Data),
+        .clk()
+    );
+    reg_file data_memory(
+        .r_data(Out_Data),
+        
+        .wr_en(WrRam),
+        .rd_en(RdRam),
+        .addr(Address_data),
+        .w_data(In_Data)
+    );
+    
+endmodule

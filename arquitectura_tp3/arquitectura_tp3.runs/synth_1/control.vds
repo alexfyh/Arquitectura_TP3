@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Oct 12 18:55:36 2019
-# Process ID: 12653
+# Start of session at: Wed Nov  6 16:31:19 2019
+# Process ID: 10901
 # Current directory: /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1
 # Command line: vivado -log control.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source control.tcl
 # Log file: /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1/control.vds
@@ -15,28 +15,22 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12659 
+INFO: Helper process launched with PID 10908 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1254.293 ; gain = 66.875 ; free physical = 229 ; free virtual = 4393
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1254.293 ; gain = 66.871 ; free physical = 147 ; free virtual = 4135
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'control' [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v:21]
 INFO: [Synth 8-6157] synthesizing module 'univ_bin_counter' [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/univ_bin_counter.v:22]
 	Parameter N bound to: 11 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'univ_bin_counter' (1#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/univ_bin_counter.v:22]
-INFO: [Synth 8-6157] synthesizing module 'reg_file' [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v:21]
-	Parameter B bound to: 16 - type: integer 
-	Parameter W bound to: 11 - type: integer 
-	Parameter FILE bound to: instrucciones.mem - type: string 
-INFO: [Synth 8-3876] $readmem data file 'instrucciones.mem' is read successfully [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v:43]
-INFO: [Synth 8-6155] done synthesizing module 'reg_file' (2#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v:21]
 INFO: [Synth 8-6157] synthesizing module 'instruction_decoder' [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'instruction_decoder' (3#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'control' (4#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'instruction_decoder' (2#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instruction_decoder.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'control' (3#1) [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v:21]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1298.918 ; gain = 111.500 ; free physical = 241 ; free virtual = 4405
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1298.918 ; gain = 111.496 ; free physical = 206 ; free virtual = 4150
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1298.918 ; gain = 111.500 ; free physical = 240 ; free virtual = 4405
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1298.918 ; gain = 111.496 ; free physical = 217 ; free virtual = 4161
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -44,7 +38,7 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1306.922 ; gain = 119.504 ; free physical = 239 ; free virtual = 4404
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1306.922 ; gain = 119.500 ; free physical = 216 ; free virtual = 4160
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/univ_bin_counter.v:52]
 INFO: [Synth 8-5546] ROM "WrPC" won't be mapped to RAM because it is too sparse
@@ -55,7 +49,7 @@ INFO: [Synth 8-5546] ROM "Op" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "WrRam" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "RdRam" is below threshold of ROM address width. It will be mapped to LUTs
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1314.930 ; gain = 127.512 ; free physical = 231 ; free virtual = 4396
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1314.930 ; gain = 127.508 ; free physical = 207 ; free virtual = 4152
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -119,34 +113,8 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[0]' (FDCE) to 'program_counter/r_reg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[1]' (FDCE) to 'program_counter/r_reg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[2]' (FDCE) to 'program_counter/r_reg_reg[2]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[3]' (FDCE) to 'program_counter/r_reg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[4]' (FDCE) to 'program_counter/r_reg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[5]' (FDCE) to 'program_counter/r_reg_reg[5]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[6]' (FDCE) to 'program_counter/r_reg_reg[6]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[7]' (FDCE) to 'program_counter/r_reg_reg[7]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[8]' (FDCE) to 'program_counter/r_reg_reg[8]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[9]' (FDCE) to 'program_counter/r_reg_reg[9]'
-INFO: [Synth 8-3886] merging instance 'program_counter/r_reg_reg_rep[10]' (FDCE) to 'program_counter/r_reg_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4236
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Preliminary Mapping  Report (see note below)
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives                    | 
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-|control     | program_memory/array_reg_reg | Implied   | 2 K x 16             | RAM64X1D x 32  RAM64M x 160   | 
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-
-Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 387 ; free virtual = 4009
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -159,21 +127,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
----------------------------------------------------------------------------------
-
-Distributed RAM: Final Mapping  Report
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-|Module Name | RTL Object                   | Inference | Size (Depth x Width) | Primitives                    | 
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-|control     | program_memory/array_reg_reg | Implied   | 2 K x 16             | RAM64X1D x 32  RAM64M x 160   | 
-+------------+------------------------------+-----------+----------------------+-------------------------------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -185,7 +139,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 156 ; free virtual = 4235
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -209,7 +163,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 156 ; free virtual = 4236
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -222,7 +176,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 156 ; free virtual = 4236
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -234,25 +188,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -265,55 +219,50 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |     3|
-|3     |LUT1     |     7|
-|4     |LUT2     |    10|
-|5     |LUT5     |     5|
-|6     |LUT6     |   147|
-|7     |MUXF7    |    64|
-|8     |MUXF8    |     4|
-|9     |RAM64M   |   160|
-|10    |RAM64X1D |    32|
-|11    |FDCE     |    38|
-|12    |IBUF     |     3|
-|13    |OBUF     |    19|
-+------+---------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     3|
+|3     |LUT1   |     2|
+|4     |LUT2   |     9|
+|5     |LUT3   |     1|
+|6     |LUT4   |     2|
+|7     |LUT5   |     5|
+|8     |LUT6   |     1|
+|9     |FDCE   |    11|
+|10    |IBUF   |    18|
+|11    |OBUF   |    29|
++------+-------+------+
 
 Report Instance Areas: 
 +------+------------------------+--------------------+------+
 |      |Instance                |Module              |Cells |
 +------+------------------------+--------------------+------+
-|1     |top                     |                    |   493|
-|2     |  program_counter       |univ_bin_counter    |    58|
-|3     |  program_memory        |reg_file            |   406|
-|4     |  u_instruction_decoder |instruction_decoder |     6|
+|1     |top                     |                    |    82|
+|2     |  program_counter       |univ_bin_counter    |    26|
+|3     |  u_instruction_decoder |instruction_decoder |     6|
 +------+------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 157 ; free virtual = 4237
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 386 ; free virtual = 4008
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.289 ; gain = 261.871 ; free physical = 159 ; free virtual = 4239
-Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:19 . Memory (MB): peak = 1449.297 ; gain = 261.871 ; free physical = 159 ; free virtual = 4239
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.023 ; gain = 234.602 ; free physical = 387 ; free virtual = 4009
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1422.031 ; gain = 234.602 ; free physical = 387 ; free virtual = 4009
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 266 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 21 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 192 instances were transformed.
-  RAM64M => RAM64M (RAMD64E, RAMD64E, RAMD64E, RAMD64E): 160 instances
-  RAM64X1D => RAM64X1D (RAMD64E, RAMD64E): 32 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1538.301 ; gain = 351.008 ; free physical = 187 ; free virtual = 4213
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:23 . Memory (MB): peak = 1530.059 ; gain = 342.766 ; free physical = 341 ; free virtual = 3978
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/arquitectura_tp3/arquitectura_tp3.runs/synth_1/control.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file control_utilization_synth.rpt -pb control_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.15 ; elapsed = 00:00:00.48 . Memory (MB): peak = 1562.312 ; gain = 0.000 ; free physical = 182 ; free virtual = 4214
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 12 18:56:04 2019...
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.26 . Memory (MB): peak = 1554.070 ; gain = 0.000 ; free physical = 338 ; free virtual = 3978
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  6 16:31:51 2019...
