@@ -1,15 +1,25 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto e2861177ce2843239e0962205fa027ce --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot pc_instruccion_behav xil_defaultlib.pc_instruccion xil_defaultlib.glbl -log elaborate.log 
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto e2861177ce2843239e0962205fa027ce --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_bip_behav xil_defaultlib.test_bip xil_defaultlib.glbl -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port w_data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v:60]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 11 for port d [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/control.v:48]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 16 for port w_data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/bip.v:67]
+WARNING: [VRFC 10-278] actual bit length 11 differs from formal bit length 16 for port Out_Data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/bip.v:78]
+WARNING: [VRFC 10-278] actual bit length 11 differs from formal bit length 16 for port r_data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/bip.v:83]
+WARNING: [VRFC 10-278] actual bit length 11 differs from formal bit length 16 for port w_data [/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/bip.v:88]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.univ_bin_counter
+Compiling module xil_defaultlib.instruction_decoder
+Compiling module xil_defaultlib.control
 Compiling module xil_defaultlib.reg_file(FILE="/home/alexyh/Escr...
-Compiling module xil_defaultlib.pc_instruccion
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.reg_file
+Compiling module xil_defaultlib.bip
+Compiling module xil_defaultlib.test_bip
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot pc_instruccion_behav
+Built simulation snapshot test_bip_behav

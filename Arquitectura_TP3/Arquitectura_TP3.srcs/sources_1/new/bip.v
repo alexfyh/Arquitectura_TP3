@@ -21,6 +21,8 @@
 
 
 module bip(
+        output [10:0] program_counter,
+        
         input clk,
         input reset
     );
@@ -33,7 +35,7 @@ module bip(
     wire RdRam;
     wire [10:0] Operand;
     wire [10:0] Addr;
-    wire [10:0] Instruccion;
+    wire [15:0] Instruction;
     
     wire [10:0] Address_data;
     wire [10:0] In_Data;
@@ -42,7 +44,7 @@ module bip(
     control u_control(
         .SelA(SelA),
         .SelB(SelB),
-        .WrACC(WrAcc),
+        .WrAcc(WrAcc),
         .Op(Op),
         .WrRam(WrRam),
         .RdRam(RdRam),
@@ -51,13 +53,13 @@ module bip(
         
         .clk(clk),
         .reset(reset),
-        .Instruccion(Instruccion)
+        .Instruction(Instruction)
         
     );
     reg_file 
         #(.FILE("/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instrucciones.mem"))
         program_memory(
-        .r_data(Instruccion),
+        .r_data(Instruction),
         
         .wr_en(1'b0),
         .rd_en(1'b1),
@@ -74,7 +76,8 @@ module bip(
         .Op(Op),
         .Operand(Operand),
         .Out_Data(Out_Data),
-        .clk()
+        .clk(clk),
+        .reset(reset)
     );
     reg_file data_memory(
         .r_data(Out_Data),
@@ -82,7 +85,9 @@ module bip(
         .wr_en(WrRam),
         .rd_en(RdRam),
         .addr(Address_data),
-        .w_data(In_Data)
+        .w_data(In_Data),
+        .clk(clk)
     );
+    assign program_counter = Addr;
     
 endmodule

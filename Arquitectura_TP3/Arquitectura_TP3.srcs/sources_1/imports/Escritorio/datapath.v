@@ -29,7 +29,8 @@ module datapath(
         input Op,
         input [10:0] Operand,
         input [15:0] Out_Data,
-        input clk
+        input clk,
+        input reset
     );
     wire [15:0] signal_extended;
     wire [15:0] result;
@@ -49,7 +50,10 @@ module datapath(
     assign output_selB = SelB ? signal_extended : Out_Data;
     
     always @(negedge clk)
-        ACC<=output_SelA;
+        if(reset)
+            ACC<=0;
+         else
+            ACC<=output_SelA;
         
     alu basic_alu
     (
