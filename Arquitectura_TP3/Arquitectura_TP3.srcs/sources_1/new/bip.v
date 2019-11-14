@@ -38,8 +38,8 @@ module bip(
     wire [15:0] Instruction;
     
     wire [10:0] Address_data;
-    wire [10:0] In_Data;
-    wire [10:0] Out_Data;
+    wire [15:0] In_Data;
+    wire [15:0] Out_Data;
     
     control u_control(
         .SelA(SelA),
@@ -64,11 +64,11 @@ module bip(
         .wr_en(1'b0),
         .rd_en(1'b1),
         .addr(Addr),
-        .w_data(0)
+        .w_data({16{1'b0}})
     );
     datapath u_datapath(
         .Address(Address_data),
-        .In_Data(),
+        .In_Data(In_Data),
         
         .SelA(SelA),
         .SelB(SelB),
