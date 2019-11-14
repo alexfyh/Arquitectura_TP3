@@ -53,8 +53,10 @@ module datapath(
         if(reset)
             ACC<=0;
          else
-            ACC<=output_SelA;
-        
+            begin
+            if(WrAcc)
+                ACC<=output_SelA;
+            end
     alu basic_alu
     (
         .resultado(result),
