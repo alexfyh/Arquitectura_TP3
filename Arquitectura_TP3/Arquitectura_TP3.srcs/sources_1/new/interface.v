@@ -21,7 +21,7 @@
 
 
 module interface(
-        output reg[15:0]   instruction,
+        output reg [15:0]   instruction_output,
         output reg         wr_ena,
         output reg         start,
         
@@ -40,30 +40,41 @@ module interface(
         
     reg [1:0]   state,state_next;
     reg [10:0]  counter, counter_next;
-    reg [7:0]   instruction_msb, instruction_msb_next;
+    reg [15:0]   instruction, instruction_next;
+    
+    //reg [7:0] entrada_anterior;
     
     always @(posedge clk)
     if (reset)
     begin
         state <= MSB;
-        instruction_msb <= {8{1'b0}};
-        counter <= {12{1'b0}};
+        instruction <= {16{1'b0}};
+        counter <= {11{1'b0}};
     end
     else
     begin
         state <= state_next;
-        instruction_msb <= instruction_msb_next;
+        instruction <= instruction_next;
         counter <= counter_next;
     end
-    
-    always @(*)
+    /*
+    always @(negedge clk)
     begin
-        instruction = {12{1'b0}};
+        if(state==MSB && rx_done)
+        begin
+            entrada_anterior<=rx_data;
+        end    
+    end
+    */
+    always @*
+    begin
+        instruction_next= instruction;
+        
+        instruction_output= {16{1'b0}};
         wr_ena = 1'b0;
         start= 1'b0;
         
         state_next = state;
-        instruction_msb_next= instruction_msb;
         counter_next = counter;
        
         case (state)
@@ -71,8 +82,14 @@ module interface(
             begin
                 if(rx_done)
                 begin
+                    instruction_next = {rx_data,{8{1'b0}}};
+                    wr_ena = 1'b0;
                     state_next = LSB;
-                    instruction_msb_next = rx_data;
+                end
+                else
+                begin
+                    wr_ena = 1'b0;
+                    state_next = MSB;
                 end
             end
             
@@ -80,10 +97,10 @@ module interface(
             begin
                 if(rx_done)
                 begin
-                    if(~&instruction[15:11])
+                    if(|(instruction[15:11]))
                     begin
                         state_next = MSB;
-                        instruction = {instruction_msb,rx_data};
+                        //instruction_output = {instruction[15:8],rx_data};
                         wr_ena = 1'b1;
                     end
                     else
@@ -91,12 +108,17 @@ module interface(
                         state_next = EXE;
                     end
                 end
+                else
+                begin
+                    state_next = LSB;
+                    wr_ena = 1'b0;
+                end
             
             end
             
             EXE:
             begin
-                if(bip_done)
+                if(rx_done)
                     state_next = SND;
                 else
                 begin
@@ -111,5 +133,6 @@ module interface(
             end
         endcase
     end
+    //assign instruction_output = instruction;
     
 endmodule
