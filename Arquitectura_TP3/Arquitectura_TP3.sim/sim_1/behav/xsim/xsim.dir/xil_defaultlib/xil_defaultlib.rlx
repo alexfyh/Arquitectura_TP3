@@ -3,12 +3,12 @@
 Jun 14 2018
 20:07:38
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.sim/sim_1/behav/xsim/glbl.v,1529022455,verilog,,,,glbl,,,,,,,,
-/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sim_1/new/interface_test.v,1574634486,verilog,,,,interface_test,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sim_1/new/interface_test.v,1574636637,verilog,,,,interface_test,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sim_1/new/test_bip.v,1573617977,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sim_1/new/interface_test.v,,test_bip,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/imports/Escritorio/datapath.v,1573699054,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/uart.v,,datapath,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/bip.v,1573687875,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/imports/Escritorio/datapath.v,,bip,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/fifo.v,1573946207,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/interface.v,,fifo,,,,,,,,
-/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/interface.v,1574633866,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v,,interface,,,,,,,,
+/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/interface.v,1574636791,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v,,interface,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/mod_m_counter.v,1573946133,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/fifo.v,,mod_m_counter,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/uart.v,1573940545,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/uart_rx.v,,uart,,,,,,,,
 /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/uart_rx.v,1573940531,verilog,,/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,

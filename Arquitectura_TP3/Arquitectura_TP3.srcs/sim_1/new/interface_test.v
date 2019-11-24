@@ -29,12 +29,14 @@ module interface_test;
     wire [15:0] instruction;
     wire wr_ena;
     wire start;
+    wire [10:0] address;
     
     
     interface u_interface(
         .instruction(instruction),
         .wr_ena(wr_ena),
         .start(start),
+        .address(address),
         
         .rx_data(rx_data),
         .rx_done(rx_done),

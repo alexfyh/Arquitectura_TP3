@@ -22,6 +22,7 @@
 
 module interface(
         output  [15:0]   instruction,
+        output [10:0]   address,
         output  reg        wr_ena,
         output          start,
         
@@ -43,7 +44,6 @@ module interface(
     reg [10:0]  counter, counter_next;
     
     reg [7:0] instruction_msb,instruction_msb_next;
-    //reg [7:0] instruction_msb_next;
     
     always @(posedge clk)
     begin
@@ -81,6 +81,7 @@ module interface(
         instruction_msb_next=instruction_msb;
         
         wr_ena = 0;
+        counter_next = counter;
        
         case (state)
             INI:
@@ -115,6 +116,7 @@ module interface(
                     instruction_msb_next=rx_data;     
                     state_next = MSB;
                     wr_ena = 1;
+                    counter_next = counter + 1;
                 end
             end
             
@@ -131,8 +133,7 @@ module interface(
         endcase
     end
     
-    
-    //assign wr_ena = (state==LSB && rx_done);
+    assign address = counter;
     assign start = (state==EXE);
     assign instruction={instruction_msb,rx_data};
     //assign instruction_msb_next=(state==MSB && rx_done)? rx_data: instruction_msb;
