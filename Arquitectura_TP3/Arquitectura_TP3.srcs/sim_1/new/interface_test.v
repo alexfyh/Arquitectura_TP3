@@ -32,7 +32,7 @@ module interface_test;
     
     
     interface u_interface(
-        .instruction_output(instruction),
+        .instruction(instruction),
         .wr_ena(wr_ena),
         .start(start),
         
@@ -46,6 +46,8 @@ module interface_test;
         clk=1;
         reset=1;
         rx_done=0;
+        rx_data=8'b1111_0000;
+        bip_done=0;
         
         #1
         reset=0;
@@ -57,35 +59,26 @@ module interface_test;
         #1
         rx_done=0;
         
-        #1
-        rx_done = 1;
-        rx_data=8'b0001_0000;
+        #3        rx_done = 1;
+        rx_data=8'b0000_0001;
         
         #1
         rx_done=0;
         
-        #1
+        #3
         rx_done=1;
-        rx_data=8'b0001_0000;
-        /*
-        #2
-        reset=0;
-        rx_data = 8'b0001_0001;
-        rx_done = 1'b1;
-        #2
-        rx_data = 8'b0010_0010;
-        rx_done = 1'b1;
-        #2
-        rx_data = 8'b0011_0011;
-        rx_done = 1'b1;
-        #2
-        rx_data = 8'b0100_0100;
-        rx_done = 1'b1;
-        #2
-        rx_data = 8'b0000_0000;
-        rx_done = 1'b1;
-        */
-        #10
+        rx_data=8'b0010_0000;
+        
+        #1
+        rx_done=0;
+        
+        #3
+        rx_done=1;
+        rx_data=8'b0000_0010;
+        
+        #5
+        bip_done=1;
+        #1
         $finish;
                
     end

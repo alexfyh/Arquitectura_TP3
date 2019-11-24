@@ -21,9 +21,9 @@
 
 
 module interface(
-        output reg [15:0]   instruction_output,
-        output reg         wr_ena,
-        output reg         start,
+        output  [15:0]   instruction,
+        output          wr_ena,
+        output          start,
         
         input [7:0]     rx_data,
         input           rx_done,
@@ -32,107 +32,119 @@ module interface(
         input           reset
     );
     //estados
-    localparam [1:0] 
-        MSB = 2'b00,
-        LSB = 2'b01,
-        EXE = 2'b10,
-        SND = 2'b11;
+    localparam [2:0] 
+        MSB = 3'b000,
+        LSB = 3'b001,
+        EXE = 3'b010,
+        SND = 3'b011,
+        INI = 3'b111;
         
-    reg [1:0]   state,state_next;
+    reg [2:0]   state,state_next;
     reg [10:0]  counter, counter_next;
-    reg [15:0]   instruction, instruction_next;
     
-    //reg [7:0] entrada_anterior;
+    reg [7:0] instruction_msb,instruction_msb_next;
+    //reg [7:0] instruction_msb_next;
     
     always @(posedge clk)
-    if (reset)
     begin
-        state <= MSB;
-        instruction <= {16{1'b0}};
-        counter <= {11{1'b0}};
-    end
-    else
-    begin
-        state <= state_next;
-        instruction <= instruction_next;
-        counter <= counter_next;
+        if (reset)
+        begin
+            state <= INI;
+            counter <= {11{1'b0}};
+            instruction_msb <= {8{1'b0}};
+        end
+        else
+        begin
+            state <= state_next;
+            counter <= counter_next;
+            instruction_msb <= instruction_msb_next;  
+        end
     end
     /*
     always @(negedge clk)
     begin
-        if(state==MSB && rx_done)
-        begin
-            entrada_anterior<=rx_data;
-        end    
+        if (reset)
+            instruction_msb <= {8{1'b0}};
+        else
+            instruction_msb <= instruction_msb_next;
     end
     */
     always @*
     begin
-        instruction_next= instruction;
-        
-        instruction_output= {16{1'b0}};
+        /*
+        instruction= {16{1'b0}};
         wr_ena = 1'b0;
         start= 1'b0;
-        
+        */
         state_next = state;
         counter_next = counter;
+        instruction_msb_next=instruction_msb;
        
         case (state)
+            INI:
+            begin
+                if(rx_done)
+                begin
+                    instruction_msb_next=rx_data;
+                    state_next = MSB; 
+                end
+            end
+            
             MSB:
             begin
                 if(rx_done)
                 begin
-                    instruction_next = {rx_data,{8{1'b0}}};
-                    wr_ena = 1'b0;
-                    state_next = LSB;
-                end
-                else
-                begin
-                    wr_ena = 1'b0;
-                    state_next = MSB;
+                    
+                    state_next=LSB;
                 end
             end
             
             LSB:
             begin
-                if(rx_done)
+                if(rx_done &&instruction_msb[7:3]!=0)
                 begin
-                    if(|(instruction[15:11]))
+                    instruction_msb_next=rx_data;     
+                    state_next = MSB;
+                end
+                else
+                    state_next= LSB;
+                /*
+                begin
+                    if(instruction_msb[7:3]!=0)
                     begin
+                        instruction_msb_next=rx_data;
                         state_next = MSB;
-                        //instruction_output = {instruction[15:8],rx_data};
-                        wr_ena = 1'b1;
                     end
                     else
                     begin
                         state_next = EXE;
                     end
                 end
-                else
-                begin
-                    state_next = LSB;
-                    wr_ena = 1'b0;
-                end
-            
+                */
             end
             
             EXE:
             begin
-                if(rx_done)
+                if(bip_done)
                     state_next = SND;
                 else
                 begin
                     state_next = EXE;
-                    start = 1'b1;
                 end
             end
             
             SND:
             begin
-                state_next = MSB;
+                state_next = SND;
             end
         endcase
     end
+    
+    
+    assign wr_ena = (state==LSB && rx_done);
+    assign start = (state==EXE);
+    assign instruction={instruction_msb,rx_data};
+    //assign instruction_msb_next=(state==MSB && rx_done)? rx_data: instruction_msb;
     //assign instruction_output = instruction;
     
 endmodule
