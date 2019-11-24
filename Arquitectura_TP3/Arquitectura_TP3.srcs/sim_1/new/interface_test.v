@@ -59,24 +59,60 @@ module interface_test;
         #1
         rx_done=0;
         
-        #3        rx_done = 1;
+        #2        
+        rx_done = 1;
         rx_data=8'b0000_0001;
         
         #1
         rx_done=0;
         
-        #3
+        #2
         rx_done=1;
         rx_data=8'b0010_0000;
         
         #1
         rx_done=0;
         
-        #3
+        #2
         rx_done=1;
         rx_data=8'b0000_0010;
         
-        #5
+        #1
+        rx_done=0;
+        
+        #2
+        rx_done=1;
+        rx_data=8'b0100_0000;
+        
+        #1
+        rx_done=0;
+        
+        #2
+        rx_done=1;
+        rx_data=8'b0000_0100;
+        
+        #1
+        rx_done=0;
+        
+        #2
+        rx_done=1;
+        rx_data=8'b0000_0000;
+        
+        #1
+        rx_done=0;
+        
+        #2
+        rx_done=1;
+        rx_data=8'b0000_0000;
+        
+        #1
+        rx_done=0;
+        
+        //#1
+        //rx_done=1;
+        
+        
+        #10
         bip_done=1;
         #1
         $finish;

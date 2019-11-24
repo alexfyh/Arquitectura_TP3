@@ -22,7 +22,7 @@
 
 module interface(
         output  [15:0]   instruction,
-        output          wr_ena,
+        output  reg        wr_ena,
         output          start,
         
         input [7:0]     rx_data,
@@ -79,6 +79,8 @@ module interface(
         state_next = state;
         counter_next = counter;
         instruction_msb_next=instruction_msb;
+        
+        wr_ena = 0;
        
         case (state)
             INI:
@@ -94,43 +96,32 @@ module interface(
             begin
                 if(rx_done)
                 begin
-                    
-                    state_next=LSB;
+                    if(instruction_msb[7:3]!=0)
+                    begin
+                        state_next = LSB;
+                    end
+                    else
+                    begin
+                        wr_ena = 1;
+                        state_next=EXE;
+                    end
                 end
             end
             
             LSB:
             begin
-                if(rx_done &&instruction_msb[7:3]!=0)
+                if(rx_done)
                 begin
                     instruction_msb_next=rx_data;     
                     state_next = MSB;
+                    wr_ena = 1;
                 end
-                else
-                    state_next= LSB;
-                /*
-                begin
-                    if(instruction_msb[7:3]!=0)
-                    begin
-                        instruction_msb_next=rx_data;
-                        state_next = MSB;
-                    end
-                    else
-                    begin
-                        state_next = EXE;
-                    end
-                end
-                */
             end
             
             EXE:
             begin
                 if(bip_done)
                     state_next = SND;
-                else
-                begin
-                    state_next = EXE;
-                end
             end
             
             SND:
@@ -141,7 +132,7 @@ module interface(
     end
     
     
-    assign wr_ena = (state==LSB && rx_done);
+    //assign wr_ena = (state==LSB && rx_done);
     assign start = (state==EXE);
     assign instruction={instruction_msb,rx_data};
     //assign instruction_msb_next=(state==MSB && rx_done)? rx_data: instruction_msb;
