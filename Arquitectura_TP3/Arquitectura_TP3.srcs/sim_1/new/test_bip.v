@@ -25,7 +25,9 @@ module test_bip;
     reg reset;
     wire [10:0] salida;
     
-    bip u_bip(
+    bip 
+        #(.PROGRAM_FILE("/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/instrucciones.mem"))
+    u_bip(
         .clk(clk),
         .reset(reset),
         .program_counter(salida)

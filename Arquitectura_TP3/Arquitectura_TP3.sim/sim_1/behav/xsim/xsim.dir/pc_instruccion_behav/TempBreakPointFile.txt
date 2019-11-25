@@ -1,2 +1,1 @@
 Breakpoint File Version 1.0
-44 true /home/alexyh/Escritorio/Arqui/Arquitectura_TP3/reg_file.v

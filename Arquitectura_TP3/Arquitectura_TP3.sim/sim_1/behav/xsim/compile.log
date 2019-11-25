@@ -26,6 +26,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alexyh/Escritorio/Arqui/Arqui
 INFO: [VRFC 10-311] analyzing module fifo
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/new/interface.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/Arquitectura_TP3/Arquitectura_TP3.srcs/sources_1/imports/Arquitectura_TP3/reg_file_mod.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module reg_file_mod
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/pc_instruccion.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pc_instruccion
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/alexyh/Escritorio/Arqui/Arquitectura_TP3/prueba_ram_datos.v" into library xil_defaultlib
