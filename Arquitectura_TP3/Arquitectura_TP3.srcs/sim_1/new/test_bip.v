@@ -30,7 +30,10 @@ module test_bip;
     u_bip(
         .clk(clk),
         .reset(reset),
-        .program_counter(salida)
+        .program_counter(salida),
+        .address_2_program_memory({11{1'b0}}),
+        .data_2_program_memory({16{1'b0}}),
+        .wr_ena(1'b0)
     );
     
     initial begin
