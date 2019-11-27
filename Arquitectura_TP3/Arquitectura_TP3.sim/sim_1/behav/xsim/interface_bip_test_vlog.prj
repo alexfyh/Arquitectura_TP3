@@ -1,0 +1,28 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../alu.v" \
+"../../../../../univ_bin_counter.v" \
+"../../../../../reg_file.v" \
+"../../../../../instruction_decoder.v" \
+"../../../../../control.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/bip.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/imports/Escritorio/datapath.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/uart.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/uart_rx.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/uart_tx.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/mod_m_counter.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/fifo.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/interface.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/imports/Arquitectura_TP3/reg_file_mod.v" \
+"../../../../Arquitectura_TP3.srcs/sources_1/new/top.v" \
+"../../../../../pc_instruccion.v" \
+"../../../../../prueba_ram_datos.v" \
+"../../../../Arquitectura_TP3.srcs/sim_1/new/test_bip.v" \
+"../../../../Arquitectura_TP3.srcs/sim_1/new/interface_test.v" \
+"../../../../Arquitectura_TP3.srcs/sim_1/new/interface_bip_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
