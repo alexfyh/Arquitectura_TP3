@@ -134,7 +134,7 @@ module interface(
     end
     
     assign address = counter;
-    assign start = (state==EXE);
+    assign start = (state==EXE ||state==SND);
     assign instruction={instruction_msb,rx_data};
     //assign instruction_msb_next=(state==MSB && rx_done)? rx_data: instruction_msb;
     //assign instruction_output = instruction;

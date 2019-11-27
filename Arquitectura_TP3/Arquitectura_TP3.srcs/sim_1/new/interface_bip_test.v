@@ -103,7 +103,7 @@ module interface_bip_test;
         //6 byte
         #1
         rx_done =1;
-        rx_data =8'b0001_0100;       
+        rx_data =8'b0000_0100;       
         #1
         rx_done =0;
         
