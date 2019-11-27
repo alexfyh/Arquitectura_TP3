@@ -34,7 +34,7 @@ module top(
     wire rx_done_tick;
     wire [7:0] rx_data;
     wire reset;
-    //assign reset = btnR;
+    assign reset = btnR;
     /*
     bip u_bip(
         
