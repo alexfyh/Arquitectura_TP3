@@ -61,86 +61,124 @@ module interface_bip_test;
         clk     =1;
         reset   =1;
         rx_done =0;
-        rx_data =8'b0001_0001;
-        
+        rx_data =8'b0001_0001;     
         #1
         reset   =0;
-        
-        
         
         //1 byte
         #2
         rx_done =1;
-        rx_data =8'b0010_0010;
-        
+        rx_data =8'b0001_1000; 
         #1
         rx_done =0;
 
         //2 byte
         #1
         rx_done =1;
-        rx_data =8'b0011_0011;
-        
+        rx_data =8'b0001_0000;     
         #1
         rx_done =0;
+        
         //3 byte
         #1
         rx_done =1;
-        rx_data =8'b0100_0100;
-        
+        rx_data =8'b0000_1000;     
         #1
         rx_done =0;
+        
         //4 byte
         #1
         rx_done =1;
-        rx_data =8'b0101_0101;
-        
+        rx_data =8'b0000_0001;        
         #1
         rx_done =0;
+        
         //5 byte
         #1
         rx_done =1;
-        rx_data =8'b0110_0110;
-        
+        rx_data =8'b0001_1000;        
         #1
         rx_done =0;
+        
         //6 byte
         #1
         rx_done =1;
-        rx_data =8'b0111_0111;
-        
+        rx_data =8'b0001_0100;       
         #1
         rx_done =0;
+        
         //7 byte
         #1
         rx_done =1;
-        rx_data =8'b1000_1000;
-        
+        rx_data =8'b0000_1000;        
         #1
         rx_done =0;
+        
         //8 byte
         #1
         rx_done =1;
-        rx_data =8'b1001_1001;
-        
+        rx_data =8'b0000_0010;       
         #1
         rx_done =0;
+        
         //9 byte
         #1
         rx_done =1;
-        rx_data =8'b1010_1010;
-        
+        rx_data =8'b0001_0000;       
         #1
         rx_done =0;
+        
         //10 byte
         #1
         rx_done =1;
-        rx_data =8'b1011_1011;
-        
+        rx_data =8'b0000_0010;       
+        #1
+        rx_done =0;
+
+        //11 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0010_0000;        
+        #1
+        rx_done =0;
+
+        //12 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0000_0001;       
         #1
         rx_done =0;
         
-        #5
+        //13 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0000_1000;       
+        #1
+        rx_done =0;
+        
+        //14 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0000_0011;      
+        #1
+        rx_done =0;
+        
+        //15 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0000_0000;      
+        #1
+        rx_done =0;
+        
+        //16 byte
+        #1
+        rx_done =1;
+        rx_data =8'b0000_0000;      
+        #1
+        rx_done =0;                               
+        
+        
+        #15
         $finish;
        
         
