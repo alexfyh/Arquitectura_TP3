@@ -74,7 +74,7 @@ module bip
         .r_data(Instruction),
         
         .wr_en(wr_ena),
-        .rd_en(1'b1),
+        //.rd_en(1'b1),
         .w_addr(address_2_program_memory),
         .r_addr(Addr),
         .w_data(data_2_program_memory),

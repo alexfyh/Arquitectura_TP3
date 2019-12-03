@@ -24,26 +24,51 @@ module top(
     input clk,
     input btnR,
     input RsRx,
-    output RsTx
+    output RsTx,
+    output [10:0] led
     );
     localparam DBIT     = 16;
     localparam SB_TICK  = 16;
     localparam DVSR     = 326;
     localparam DVSR_BIT = 9;
+    wire reset;
+    
+    assign reset = btnR;
+    wire [10:0] program_counter;
+    assign led = program_counter;
     wire tick;
     wire rx_done_tick;
     wire [7:0] rx_data;
-    wire reset;
-    assign reset = btnR;
-    /*
+    wire bip_done;
+    wire wr_2_program_memory;
+    wire [15:0] data_2_program_memory;
+    wire [10:0] address_2_program_memory;
+    wire reset_interno;
+    
     bip u_bip(
+        .program_counter(program_counter),
+        .bip_done(bip_done),
         
+        .address_2_program_memory(address_2_program_memory),
+        .data_2_program_memory(data_2_program_memory),
+        .wr_ena(wr_2_program_memory),
+        .clk(clk),
+        .reset(~reset_interno)
     );
     
     interface u_interface(
+        .instruction(data_2_program_memory),
+        .address(address_2_program_memory),
+        .wr_ena(wr_2_program_memory),
+        .start(reset_interno),
         
+        .rx_data(rx_data),
+        .rx_done(rx_done_tick),
+        .bip_done(bip_done),
+        .clk(clk),
+        .reset(reset)
     );
-    */
+    
     
     uart_rx 
             #(.DBIT(DBIT),
@@ -65,8 +90,8 @@ module top(
             .tx(RsTx),
             .tx_done_tick(),
             
-            .din(rx_data),
-            .tx_start(rx_done_tick),
+            .din(0),
+            .tx_start(0),
             .s_tick(tick),
             .clk(clk),
             .reset(reset)
